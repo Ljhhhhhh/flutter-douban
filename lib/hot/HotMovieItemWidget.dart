@@ -14,7 +14,7 @@ class HotMovieItemWidget extends StatefulWidget {
 }
 
 class HotMovieItemWidgetState extends State<HotMovieItemWidget> {
-  static const methodChannel = const MethodChannel('flutter.doubanmovie/buy');
+  // static const methodChannel = const MethodChannel('flutter.doubanmovie/buy');
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -74,10 +74,7 @@ class HotMovieItemWidgetState extends State<HotMovieItemWidget> {
                   textColor: Colors.red,
                   highlightedBorderColor: Colors.red,
                   borderSide: BorderSide(color: Colors.red),
-                  onPressed: () {
-                    methodChannel.invokeMethod('buyTicket',
-                        '购买 ' + widget.hotMovieData.title + ' 电影票一张');
-                  },
+                  onPressed: () {},
                 )
               ],
             ),
